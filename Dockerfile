@@ -13,8 +13,8 @@ RUN apk --update add ca-certificates
 # persistent / runtime deps
 RUN apk update \
     && apk add --no-cache --virtual .persistent-deps \
-        git \
-		composer
+      git \
+      composer
 
 # install and remove building packages
 RUN install-php-extensions \
