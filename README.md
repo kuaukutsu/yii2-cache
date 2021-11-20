@@ -10,12 +10,6 @@ docker build -t kuaukutsu/cache:php .
 docker run --init -it --rm -v "$(pwd):/app" -w /app kuaukutsu/cache:php sh
 ```
 
-first run: 
-```shell
-/app# apk add composer
-/app# composer update
-```
-
 ## Testing
 
 ### Unit testing
