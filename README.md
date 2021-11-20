@@ -6,7 +6,8 @@
 
 local
 ```shell
-docker run --init -it --rm -v "$(pwd):/app" -w /app ghcr.io/hrmessenger/php:fpm sh
+docker build -t kuaukutsu/cache:php .
+docker run --init -it --rm -v "$(pwd):/app" -w /app kuaukutsu/cache:php sh
 ```
 
 first run: 
@@ -27,7 +28,7 @@ The package is tested with [PHPUnit](https://phpunit.de/). To run tests:
 
 local
 ```shell
-docker run --init -it --rm -v "$(pwd):/app" -w /app ghcr.io/hrmessenger/php:fpm ./vendor/bin/phpunit 
+docker run --init -it --rm -v "$(pwd):/app" -w /app kuaukutsu/cache:php ./vendor/bin/phpunit 
 ```
 
 ### Code Sniffer
@@ -35,7 +36,7 @@ docker run --init -it --rm -v "$(pwd):/app" -w /app ghcr.io/hrmessenger/php:fpm 
 local
 
 ```shell
-docker run --init -it --rm -v "$(pwd):/app" -w /app ghcr.io/hrmessenger/php:fpm ./vendor/bin/phpcs 
+docker run --init -it --rm -v "$(pwd):/app" -w /app kuaukutsu/cache:php ./vendor/bin/phpcs 
 ```
 
 phpqa
@@ -54,7 +55,7 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 
 local
 ```shell
-docker run --init -it --rm -v "$(pwd):/app" -w /app ghcr.io/hrmessenger/php:fpm ./vendor/bin/psalm 
+docker run --init -it --rm -v "$(pwd):/app" -w /app kuaukutsu/cache:php ./vendor/bin/psalm 
 ```
 
 phpqa
